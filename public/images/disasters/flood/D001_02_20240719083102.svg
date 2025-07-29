@@ -1,0 +1,10 @@
+<!-- 示例圖片placeholder -->
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#dbeafe"/>
+  <text x="200" y="150" text-anchor="middle" font-family="Arial" font-size="16" fill="#1e40af">
+    災情圖片 D001_02
+  </text>
+  <text x="200" y="170" text-anchor="middle" font-family="Arial" font-size="12" fill="#3b82f6">
+    積水災情示例圖片
+  </text>
+</svg>

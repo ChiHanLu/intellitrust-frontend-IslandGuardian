@@ -1,0 +1,300 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.75rem;
+  
+  /* 台灣自然風格配色 */
+  --background: oklch(0.98 0.01 120); /* 淺淺的自然綠背景 */
+  --foreground: oklch(0.2 0.02 160); /* 深森林綠文字 */
+  
+  --card: oklch(0.995 0.005 120); /* 更白的卡片背景 */
+  --card-foreground: oklch(0.25 0.02 160);
+  
+  --popover: oklch(0.995 0.005 120);
+  --popover-foreground: oklch(0.25 0.02 160);
+  
+  /* 台灣特色主色調 - 玉山藍綠 */
+  --primary: oklch(0.45 0.15 180); /* 台灣山脈藍綠色 */
+  --primary-foreground: oklch(0.99 0.01 120);
+  
+  /* 次要色調 - 竹林綠 */
+  --secondary: oklch(0.92 0.02 140); /* 淡竹綠 */
+  --secondary-foreground: oklch(0.3 0.02 160);
+  
+  /* 淡化色調 */
+  --muted: oklch(0.94 0.015 130);
+  --muted-foreground: oklch(0.5 0.02 160);
+  
+  /* 強調色 - 台灣海洋藍 */
+  --accent: oklch(0.88 0.03 200); /* 淡海洋藍 */
+  --accent-foreground: oklch(0.35 0.03 180);
+  
+  /* 警告色 - 台灣夕陽橙 */
+  --destructive: oklch(0.6 0.2 25); /* 溫和的橙紅色 */
+  
+  /* 邊框和輸入框 */
+  --border: oklch(0.88 0.02 140); /* 淡綠邊框 */
+  --input: oklch(0.95 0.01 130);
+  --ring: oklch(0.6 0.12 180); /* 焦點環 */
+  
+  /* 圖表色彩 - 台灣自然色調 */
+  --chart-1: oklch(0.6 0.18 25); /* 台灣紅土 */
+  --chart-2: oklch(0.65 0.15 180); /* 太平洋藍 */
+  --chart-3: oklch(0.55 0.2 140); /* 阿里山綠 */
+  --chart-4: oklch(0.7 0.16 60); /* 台灣金黃 */
+  --chart-5: oklch(0.5 0.18 280); /* 薰衣草紫 */
+  
+  /* 側邊欄 */
+  --sidebar: oklch(0.97 0.01 130);
+  --sidebar-foreground: oklch(0.3 0.02 160);
+  --sidebar-primary: oklch(0.45 0.15 180);
+  --sidebar-primary-foreground: oklch(0.99 0.01 120);
+  --sidebar-accent: oklch(0.92 0.02 140);
+  --sidebar-accent-foreground: oklch(0.3 0.02 160);
+  --sidebar-border: oklch(0.88 0.02 140);
+  --sidebar-ring: oklch(0.6 0.12 180);
+}
+
+.dark {
+  /* 深色模式 - 台灣夜晚風格 */
+  --background: oklch(0.08 0.01 240); /* 深藍夜空 */
+  --foreground: oklch(0.94 0.01 120); /* 淡綠月光 */
+  
+  --card: oklch(0.12 0.015 230); /* 深藍卡片 */
+  --card-foreground: oklch(0.92 0.01 120);
+  
+  --popover: oklch(0.12 0.015 230);
+  --popover-foreground: oklch(0.92 0.01 120);
+  
+  /* 深色主色調 - 台灣夜晚山脈 */
+  --primary: oklch(0.65 0.18 200); /* 明亮的月光藍 */
+  --primary-foreground: oklch(0.08 0.01 240);
+  
+  /* 深色次要色調 */
+  --secondary: oklch(0.18 0.02 220); /* 深夜藍 */
+  --secondary-foreground: oklch(0.88 0.01 120);
+  
+  /* 深色淡化色調 */
+  --muted: oklch(0.15 0.02 230);
+  --muted-foreground: oklch(0.65 0.02 180);
+  
+  /* 深色強調色 */
+  --accent: oklch(0.2 0.03 210); /* 深夜海洋 */
+  --accent-foreground: oklch(0.85 0.02 120);
+  
+  /* 深色警告色 */
+  --destructive: oklch(0.6 0.22 25); /* 溫暖橙紅 */
+  
+  /* 深色邊框和輸入框 */
+  --border: oklch(0.22 0.02 220); /* 深夜邊框 */
+  --input: oklch(0.15 0.02 230);
+  --ring: oklch(0.65 0.15 200); /* 明亮焦點環 */
+  
+  /* 深色圖表色彩 - 夜晚版本 */
+  --chart-1: oklch(0.7 0.2 25); /* 明亮橙紅 */
+  --chart-2: oklch(0.65 0.18 200); /* 明亮藍色 */
+  --chart-3: oklch(0.6 0.22 140); /* 明亮綠色 */
+  --chart-4: oklch(0.75 0.18 60); /* 明亮金黃 */
+  --chart-5: oklch(0.65 0.2 280); /* 明亮紫色 */
+  
+  /* 深色側邊欄 */
+  --sidebar: oklch(0.1 0.01 230);
+  --sidebar-foreground: oklch(0.9 0.01 120);
+  --sidebar-primary: oklch(0.65 0.18 200);
+  --sidebar-primary-foreground: oklch(0.08 0.01 240);
+  --sidebar-accent: oklch(0.18 0.02 220);
+  --sidebar-accent-foreground: oklch(0.88 0.01 120);
+  --sidebar-border: oklch(0.22 0.02 220);
+  --sidebar-ring: oklch(0.65 0.15 200);
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+    outline-color: hsl(var(--ring) / 0.5);
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+  }
+}
+
+/* 台灣自然風格動畫效果 */
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes wave-subtle {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.02) rotate(0.5deg); }
+  75% { transform: scale(0.98) rotate(-0.5deg); }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* 自然風格的陰影 */
+.natural-shadow {
+  box-shadow: 
+    0 2px 8px oklch(0.4 0.05 140 / 0.08),
+    0 1px 3px oklch(0.3 0.03 160 / 0.12);
+}
+
+.natural-shadow-lg {
+  box-shadow: 
+    0 8px 25px oklch(0.4 0.05 140 / 0.12),
+    0 3px 10px oklch(0.3 0.03 160 / 0.16);
+}
+
+/* 台灣特色漸變背景 */
+.taiwan-gradient {
+  background: linear-gradient(135deg, 
+    oklch(0.98 0.01 120) 0%,
+    oklch(0.96 0.02 140) 50%,
+    oklch(0.98 0.01 160) 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 12s ease infinite;
+}
+
+/* 深色模式的台灣風格背景 */
+.dark .taiwan-gradient {
+  background: linear-gradient(135deg, 
+    oklch(0.08 0.02 240) 0%,
+    oklch(0.1 0.03 220) 30%,
+    oklch(0.09 0.02 260) 70%,
+    oklch(0.08 0.02 230) 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+.mountain-gradient {
+  background: linear-gradient(135deg,
+    oklch(0.45 0.15 180) 0%,
+    oklch(0.55 0.12 200) 50%,
+    oklch(0.5 0.18 160) 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* 深色模式的山脈漸變 */
+.dark .mountain-gradient {
+  background: linear-gradient(135deg,
+    oklch(0.6 0.18 200) 0%,
+    oklch(0.65 0.15 220) 50%,
+    oklch(0.62 0.2 180) 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* 災情類型色彩 */
+.disaster-fire { background: oklch(0.65 0.18 25); }
+.disaster-flood { background: oklch(0.6 0.15 220); }
+.disaster-earthquake { background: oklch(0.5 0.2 50); }
+.disaster-landslide { background: oklch(0.55 0.16 80); }
+.disaster-typhoon { background: oklch(0.45 0.18 260); }
+
+/* 深色模式下的災情類型色彩 */
+.dark .disaster-fire { background: oklch(0.7 0.2 25); }
+.dark .disaster-flood { background: oklch(0.65 0.18 220); }
+.dark .disaster-earthquake { background: oklch(0.55 0.22 50); }
+.dark .disaster-landslide { background: oklch(0.6 0.18 80); }
+.dark .disaster-typhoon { background: oklch(0.5 0.2 260); }
+
+/* 深色模式下的陰影效果 */
+.dark .natural-shadow {
+  box-shadow: 
+    0 2px 8px oklch(0.05 0.02 240 / 0.3),
+    0 1px 3px oklch(0.03 0.01 220 / 0.4);
+}
+
+.dark .natural-shadow-lg {
+  box-shadow: 
+    0 8px 25px oklch(0.05 0.02 240 / 0.4),
+    0 3px 10px oklch(0.03 0.01 220 / 0.5);
+}
+
+/* 深色模式的漸變效果增強 */
+@keyframes dark-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.dark .taiwan-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, oklch(0.15 0.05 200 / 0.1) 50%, transparent 70%);
+  background-size: 200% 200%;
+  animation: dark-shimmer 8s ease-in-out infinite;
+  pointer-events: none;
+}
