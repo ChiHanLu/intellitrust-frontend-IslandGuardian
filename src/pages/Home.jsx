@@ -243,16 +243,16 @@ const Home = () => {
                 <div className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors duration-300">
                   <Github className="h-4 w-4 text-emerald-400" />
                   <a href="#" className="hover:underline">
-                    智信隊
+                    範例
                   </a>
                 </div>
                 <div className="flex items-center gap-2 text-slate-300">
                   <Mail className="h-4 w-4 text-blue-400" />
-                  <span>info@intellitrustme.com</span>
+                  <span>example.com</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-300">
                   <Phone className="h-4 w-4 text-amber-400" />
-                  <span>02-8273-2178</span>
+                  <span>02-1234-5678</span>
                 </div>
               </div>
             </div>
